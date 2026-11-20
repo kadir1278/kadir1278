@@ -1,6 +1,6 @@
 <h1 align="center">Merhaba, ben Kadir 👋</h1>
 <p align="center">
-  <b>.NET Full-Stack Developer</b> · CMS, E-Ticaret ve Lojistik Yazılımları
+  <b>.NET Backend Developer</b> · Modüler Monolit · CMS, E-Ticaret ve Lojistik Yazılımları · Yapay Zeka Destekli Geliştirme
 </p>
 
 <p align="center">
@@ -13,11 +13,24 @@
 
 ## Hakkımda
 
-- 2021'den beri .NET ekosisteminde **kurumsal web uygulamaları, API'ler ve yönetim panelleri** geliştiriyorum.
-- Kendi ürünlerim: tek base koddan müşteri sitesi türeten **çok dilli CMS platformu**, **çok satıcılı pazaryeri**, **tek kiracılı e-ticaret** ve **landing altyapısı**.
-- Kurumsal tarafta **lojistik planlama, e-mutabakat, müşteri portalı ve CRM entegrasyonu** projelerinde hem backend hem frontend yazdım.
-- Sevdiğim işler: modüler monolit mimari, eşzamanlılık ve idempotency gerektiren akışlar (stok, ödeme, entegrasyon), performans ve SEO.
-- Geliştirme sürecini **faz kapılı** yürütürüm: her faz çalışan uygulamada doğrulanır, kural setleri ve yapay zeka ajanları repoyla birlikte sürümlenir.
+Backend ağırlıklı çalışan bir .NET geliştiricisiyim. 2021'den beri **API'ler, modüler monolit mimariler, veri modelleri ve entegrasyonlar** üzerine çalışıyorum; gerektiğinde arayüzü de kendim yazarım.
+
+- **Mimari:** modüler monolit ve Clean Architecture. Modüller birbirinin verisine dokunmaz, yalnız sözleşme katmanı ve olaylar üzerinden konuşur.
+- **Veri:** EF Core ve SQL Server. Şema değişikliği kayıt altında yapılır; canlı veritabanında yıkıcı işlem ayrı bir protokolle yürür.
+- **Zor akışlar:** stok eşzamanlılığı, idempotent ödeme ve sipariş işleme, dış servis kesintisine dayanıklı entegrasyonlar (iyzico, Trendyol, Hepsiburada, SAP).
+- **Alanlar:** CMS ve e-ticaret altyapıları, SAP entegrasyon uygulamaları, lojistik planlama, e-mutabakat, müşteri portalı.
+
+### Yazılım ve yapay zeka yaklaşımım
+
+Yapay zekayı kod yazdıran bir araç olarak değil, **kuralları belli bir ekip** olarak kullanıyorum.
+
+- **Roller ayrıdır.** Analiz, tasarım, backend, veritabanı, QA ve teslim için ayrı ajanlar çalışır; her birinin yetkisi ve dokunabileceği dosyalar sınırlıdır. Kod yazan ajan kendi işini kabul etmez.
+- **Kurallar repoda yaşar.** Ajan tanımları, kural setleri ve kontrol listeleri kodla birlikte sürümlenir; projeyi klonlayan herkes aynı disiplinle çalışır.
+- **Faz kapısı geçilmeden ilerlenmez.** Her faz çalışan uygulamada, kanıtla doğrulanır. "Bitti" demek yetmez, çıktısı gösterilir.
+- **Mekanik iş betikte, yorum ajanda.** Bir betiğin denetleyebildiği şeyi yapay zekaya elle taratmam; yapay zeka yalnız yargı gerektiren yerde devreye girer.
+- **Her hata iz bırakır.** Kapanan her kusurun arkasında bir test ya da otomatik kontrol kalır, aynı hata ikinci kez yakalanır.
+- **Kritik kararlar insanda kalır.** Canlı veritabanı, yayın ve müşteriye giden içerik onaysız değişmez; gizli bilgi repoya girmez.
+- **Ölçüt teslim süresidir.** Bir araç ya da süreç, işi müşteriye daha hızlı ve daha sağlam ulaştırmıyorsa eklenmez.
 
 ---
 
@@ -116,26 +129,6 @@ Günlük siparişleri havuzda toplayıp malzeme bazlı birleştiren, **paket →
 - Koda gömülü ölçü ya da eşik yok; tüm parametreler tanım tablolarından okunur
 - Excel ile sipariş yükleme, hatalı satır düzeltme ekranı, PDF çıktıları (QuestPDF)
 - xUnit v3 + Testcontainers ile birim ve entegrasyon testleri, OpenTelemetry, HybridCache
-
----
-
-## Yayındaki Siteler (Starter.Cms ile)
-
-| Proje | Sektör | Öne çıkanlar |
-|---|---|---|
-| [Blunyx Software](https://blunyxsoftware.com) | Yazılım | TR / EN / FA / RU, RTL desteği |
-| [Machineer](https://machineer.com.tr) | B2B tedarikçi rehberi | Firma / ürün dizini, Gemini ile çoklu dil çeviri, SEO sağlık taraması |
-| [VeraGroup](https://veragroup.com.tr) | Endüstriyel boyama hatları | TR / EN / RU / DE tam eşlik, hero video, harita |
-| [EduTrend](https://edutrenddergi.com.tr) | Haber / dergi portalı | Reklam alanı şablon mimarisi |
-| [Sidox Metal](https://sidoxmetal.com) | Çelik plaka | Ürün kataloğu, sektöre özel tasarım |
-| [Kardeşler Delikli Sac](https://kardeslerdeliklisac.com) | Delikli sac / perfore | TR + EN, uygulama alanları vitrin sayfaları |
-| [Depa Makine](https://depamakine.com) | Makine imalatı | Kategori / ürün yapısı |
-| [Fuare İlaçlama](https://fuare.net) | Haşere ilaçlama | Yerel SEO, anahtar kelime sistemi |
-| [Öztaş Kompresör](https://oztaskompresor.com) | Kompresör bayisi | Şube sitesi |
-| [Webchi](https://webchi.com.tr) | Web tasarım ajansı | TR + EN, ajans portföyü |
-
-Ayrıca: **SpeedAir** (vidalı kompresör), **Özyiğit Vinç** (vinç ve yük asansörü), **AND Pergola** (pergola / kepenk),
-**Ülkerler Mermer** (galeri odaklı premium tasarım), **Birleşik Makine** (TR / EN / RU / AR) ve diğer endüstriyel firma siteleri.
 
 ---
 
